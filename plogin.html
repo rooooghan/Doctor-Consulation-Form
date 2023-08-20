@@ -1,0 +1,22 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+      <title> patient Log in</title>
+      <link rel="stylesheet" href="/static/stylee.css">
+</head>
+
+<body>
+      <h1>Log in</h1>
+      <form method="POST" action="{{ url_for('plogin') }}">
+            <label>name:</label>
+            <input type="text" name="name"><br>
+            <label>UserName:</label>
+            <input type="text" name="username"><br>
+            <label>Password:</label>
+            <input type="password" name="password"><br>
+            <input type="submit" value="Log in">
+      </form>
+</body>
+</html>

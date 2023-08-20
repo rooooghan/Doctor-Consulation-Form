@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 50px;
+  background-color: #68a59e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  padding: 70px;
+  background-color: #a2e8f9;
+}
+
+.container h1{
+    text-align: center;
+}
+
+input[type=text], input[type=password], input[type=number] {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password], input[type=number]:focus {
+  background-color: white;
+  outline: none;
+}
+
+.submit {
+  background-color: green;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 25%;
+  opacity: 0.9;
+}
+
+.submit:hover {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+
+<form method="post" action="{{ url_for('providecons') }}">
+  <div class="container">
+    <h1>DOCTOR'S CONSULTATION FORM</h1>
+
+    <label for="name"><b>Patient UserName</b></label><br>
+    <input type="text" placeholder="Enter user name" name="uname" id="uname" required><br>
+
+    <label for="medicines prescribed"><b>Medicines Prescribed</b></label><br>
+    <input type="text" name="medicines_prescribed" id="mp" required><br>
+
+    <label for="dos-and-donts"><b>Do's and Don't</b></label><br>
+    <input type="text"  name="dos-and-donts" id="dos-and-donts" required><br>
+
+    <label for="next-consultation-date" style="color: #555; font-size: 1.1rem;">Next Consultation Date:</label>
+    <input type="date" id="next-consultation-date" name="next-consultation-date" required style="padding: 0.5rem; border-radius: 5px; border: 1px solid #ccc; margin-bottom: 1rem;"><br>
+
+    <button type="submit" class="submit">Submit</button>
+  </div>
+  
+ </form>
+
+</body>
+</html>
+

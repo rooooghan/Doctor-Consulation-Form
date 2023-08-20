@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      <title>view consultation</title>
+      <link rel="stylesheet" href="/static/stylee.css">
+</head>
+
+<body>
+      <h1> consultation Log in</h1>
+      <form method="POST" action="{{ url_for('clogin') }}">
+            <label>name:</label>
+            <input type="text" name="name"><br>
+            <label>UserName:</label>
+            <input type="text" name="username"><br>
+            <label>Password:</label>
+            <input type="password" name="password"><br>
+            <input type="submit" value="Log in">
+      </form>
+</body>
+</html>

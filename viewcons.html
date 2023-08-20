@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title>CONSULTATION</title>
+</head>
+<style>
+    th{
+        text-align: center;
+        border: 2px solid black; 
+    }
+    td{
+        text-align: center;
+        border: 2px solid black;
+
+    }
+</style>
+
+<body>
+ <table>
+  <tr>
+   <th>MEDICINES PRESCRIBED</th>
+   <th>DO AND DON'T</th>
+   <th>NEXT CONSULTATION DATE</th>
+  </tr>
+  {% for row in data %}
+  <tr>
+   <td>{{ row[0] }}</td>
+   <td>{{ row[1] }}</td>
+   <td>{{ row[2] }}</td>
+  </tr>
+  {% endfor %}
+ </table>
+</body>
+</html>

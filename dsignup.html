@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+      <title> doctor Sign up</title>
+      <link rel="stylesheet" href="/static/stylee.css">
+</head>
+
+<body>
+      <h1>Sign up</h1>
+      <form method="POST" action="{{ url_for('dsignup') }}">
+            <label>Name:</label>
+            <input type="text" name="name"><br>
+<label>UserName:</label>
+            <input type="text" name="username"><br>
+        
+
+            <label>Password:</label>
+            <input type="password" name="password"><br>
+            <input type="submit" value="Sign up">
+            <p> Already have an account ? <a href="{{ url_for('dlogin') }}">Log in</a></p>
+      </form>
+</body>
+</html>
